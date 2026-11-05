@@ -1,7 +1,9 @@
 const express = require("express");
+const cookiepareser = require("cookie-parser");
 
 const app = express();
 app.use(express.json());
+app.use(cookiepareser())
 
 // require all the routes here 
 const authRouter = require("./routes/auth.routes");
