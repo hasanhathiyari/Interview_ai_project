@@ -35,8 +35,6 @@ const blacklistMOdel = require("../model/user.blacklisting");
             message:"Invalid token "
         })
     }
-
-    
 }
 
 module.exports = {
