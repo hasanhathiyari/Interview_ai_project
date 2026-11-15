@@ -1,0 +1,66 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1378 >>
+stream
+BT
+/F1 10 Tf
+50 790 Td
+14 TL
+(RAHUL SHARMA - FRONTEND DEVELOPER) Tj T*
+(Email: rahul.sharma@example.com | Pune, India) Tj T*
+() Tj T*
+(SUMMARY) Tj T*
+(Frontend developer with 1 year of experience building responsive web applications.) Tj T*
+(Skilled in JavaScript, React, HTML, CSS, and Tailwind CSS. Interested in) Tj T*
+(creating accessible interfaces and collaborating with product teams.) Tj T*
+() Tj T*
+(SKILLS) Tj T*
+(JavaScript, React.js, HTML5, CSS3, Tailwind CSS, Bootstrap, REST APIs, Git) Tj T*
+(Basic: Node.js, Express.js, MongoDB) Tj T*
+() Tj T*
+(EXPERIENCE) Tj T*
+(Frontend Developer Intern | ABC Technologies | 3 months) Tj T*
+(- Built responsive UI components and fixed frontend bugs.) Tj T*
+(- Worked with developers to implement web application features.) Tj T*
+() Tj T*
+(PROJECTS) Tj T*
+(E-commerce Website | React.js) Tj T*
+(- Created product listing, filtering, and cart features using REST APIs.) Tj T*
+(Weather Application | React.js) Tj T*
+(- Integrated a weather API to display temperature and conditions.) Tj T*
+(Student Management System | Node.js, Express.js, MongoDB) Tj T*
+(- Built a basic CRUD application for student records.) Tj T*
+() Tj T*
+(EDUCATION) Tj T*
+(B.Sc. Information Technology | XYZ College, Pune | 2026 | CGPA 8.2) Tj T*
+() Tj T*
+(CERTIFICATIONS) Tj T*
+(React.js Development \(Udemy\); JavaScript Fundamentals \(Coursera\)) Tj T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1741
+%%EOF

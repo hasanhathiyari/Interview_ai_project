@@ -124,7 +124,7 @@ const interviewReportJsonSchema = {
   ]
 };
 
-async function generateInterviewReportSchema({resume , selfDescription , JobDescription})
+async function generateInterviewReportSchema({resume , selfDescription , jobDescription})
 {
 
 const InterviewSchema = z.fromJSONSchema(interviewReportJsonSchema)
@@ -134,7 +134,7 @@ const InterviewSchema = z.fromJSONSchema(interviewReportJsonSchema)
 const prompt = `Generate an interview report for a candidate with the following details:
                         Resume: ${resume}
                         Self Description: ${selfDescription}
-                        Job Description: ${JobDescription}`;
+                        Job Description: ${jobDescription}`;
 
 const response = await ai.interactions.create({
     model:"gemini-3.5-flash-lite",
