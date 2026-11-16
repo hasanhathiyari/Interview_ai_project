@@ -79,6 +79,17 @@
   .practice-tip > span { color: #638e6d; }
   .practice-tip p { margin: 0; color: #728078; font-size: .7rem; line-height: 1.55; }
   .practice-tip strong { color: #3e634a; }
+  .resume-download-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.15rem; padding: 1rem 1.1rem; border: 1px solid #dfe9df; border-radius: 14px; background: linear-gradient(110deg, #f0f6ed, #fbfcf9); }
+  .resume-download-copy { display: flex; flex-direction: column; gap: .28rem; }
+  .resume-download-copy strong { color: #344a3b; font: 700 .78rem 'Manrope', sans-serif; }
+  .resume-download-copy span { color: #7c8980; font-size: .68rem; line-height: 1.5; }
+  .resume-download-button { min-height: 44px; flex: none; display: inline-flex; align-items: center; gap: .55rem; padding: .5rem .8rem; border: 0; border-radius: 10px; color: #fff; background: #285d4e; box-shadow: 0 5px 12px rgba(40, 93, 78, .16); text-align: left; cursor: pointer; transition: background .18s ease, transform .18s ease, box-shadow .18s ease; }
+  .resume-download-button:hover:not(:disabled) { transform: translateY(-1px); background: #1f493d; box-shadow: 0 7px 16px rgba(40, 93, 78, .22); }
+  .resume-download-button:disabled { cursor: wait; opacity: .72; }
+  .resume-download-button svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .resume-download-button > span { display: flex; flex-direction: column; gap: .08rem; font: 700 .68rem 'DM Sans', sans-serif; }
+  .resume-download-button small { color: rgba(255, 255, 255, .7); font-size: .53rem; font-weight: 500; }
+  .resume-download-error { margin: .6rem 0 0; color: #a34e4e; font-size: .7rem; text-align: right; }
   .violet-tip { border-color: #e7e1ef; background: #f6f3fa; }
   .violet-tip > span { color: #816ca4; }
   .violet-tip strong { color: #665282; }
@@ -153,6 +164,9 @@
     .report-insights { grid-template-columns: 1fr; }
     .score-card { grid-row: auto; }
     .day-content ul { font-size: .66rem; }
+    .resume-download-row { align-items: stretch; flex-direction: column; }
+    .resume-download-button { justify-content: center; }
+    .resume-download-error { text-align: left; }
   }
 
   &.dark-theme {
@@ -203,6 +217,13 @@
     .practice-tip { border-color: #36503b; background: #1d2c21; }
     .practice-tip p { color: #b2c1b5; }
     .practice-tip strong { color: #d2e8d5; }
+    .resume-download-row { border-color: #36503b; background: linear-gradient(110deg, #1d2c21, #1a251e); }
+    .resume-download-copy strong { color: #d4e7d6; }
+    .resume-download-copy span { color: #a4b4a8; }
+    .resume-download-button { color: #173b2b; background: #8ed3a2; }
+    .resume-download-button:hover:not(:disabled) { background: #a0e2b2; }
+    .resume-download-button small { color: rgba(23, 59, 43, .72); }
+    .resume-download-error { color: #f0a9a9; }
     .violet-tip { border-color: #453b55; background: #292334; }
     .violet-tip > span { color: #c2a9e4; }
     .violet-tip strong { color: #e0d1f1; }

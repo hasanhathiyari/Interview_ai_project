@@ -1,7 +1,6 @@
-import React, { useState , useEffect } from 'react'
+import React, { useState } from 'react'
 import '../style/interview.scss'
 import { useInterview } from '../hooks/useinterview'
-import { useNavigate , useParams } from 'react-router'
 
 const sections = [
   { id: 'technical', number: '01', label: 'Technical questions', icon: '⌘' },
@@ -10,9 +9,24 @@ const sections = [
 ]
 
 const Interview = () => {
-  const { report, loading , getReportById } = useInterview()
+  const { report, loading, getResumePdf } = useInterview()
   const [activeSection, setActiveSection] = useState('technical')
   const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [isDownloadingResume, setIsDownloadingResume] = useState(false)
+  const [resumeDownloadError, setResumeDownloadError] = useState('')
+
+  const handleDownloadResume = async () => {
+    if (!report?._id || isDownloadingResume) return
+
+    setResumeDownloadError('')
+    setIsDownloadingResume(true)
+    try {
+      const downloaded = await getResumePdf(report._id)
+      if (!downloaded) setResumeDownloadError('Could not generate the resume. Please try again.')
+    } finally {
+      setIsDownloadingResume(false)
+    }
+  }
 
   if (loading) {
     return <main className={`interview-report ${isDarkTheme ? 'dark-theme' : ''}`}><div className="report-state"><span className="report-state-spinner" /><h1>Loading your interview report</h1><p>We’re getting your personalized preparation ready.</p></div></main>
@@ -70,6 +84,14 @@ const Interview = () => {
                 {!technicalQuestions.length && <p className="empty-state">No technical questions are available in this report.</p>}
               </div>
               <div className="practice-tip"><span>✦</span><p><strong>Practice out loud.</strong> Explain your thinking clearly, as if you were talking to your interviewer.</p></div>
+              <div className="resume-download-row">
+                <div className="resume-download-copy"><strong>Ready to apply?</strong><span>Download a role-tailored PDF resume based on your profile.</span></div>
+                <button className="resume-download-button" type="button" onClick={handleDownloadResume} disabled={isDownloadingResume}>
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.75h7l4 4v12.5H7a2 2 0 0 1-2-2V5.75a2 2 0 0 1 2-2Z"/><path d="M14 3.75v4h4M12 10v6m-2.5-2.5L12 16l2.5-2.5M9 19h6"/></svg>
+                  <span>{isDownloadingResume ? 'Preparing resume…' : 'Download resume'}<small>PDF</small></span>
+                </button>
+              </div>
+              {resumeDownloadError && <p className="resume-download-error" role="alert">{resumeDownloadError}</p>}
             </div>
           )}
 
